@@ -21,6 +21,7 @@ body {
     background-color: var(--dark-bg);
     color: var(--text-light);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 html {
@@ -102,6 +103,7 @@ html {
     background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
     position: relative;
     overflow: hidden;
+    padding-top: 50px;
 }
 
 .hero-gradient::before {
@@ -295,5 +297,17 @@ html {
     #prinny-container {
         width: 200px !important;
         height: 200px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    #home {
+        padding-top: 50px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    #home {
+        padding-top: 100px !important;
     }
 }
