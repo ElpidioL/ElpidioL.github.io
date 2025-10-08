@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elpidio Lomeu - Full Stack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="assets/css/styles.css" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <meta name="description" content="Elpidio Lomeu – Full Stack Developer specializing in modern web applications, backend systems, and AI integrations.">
+    <meta name="keywords" content="Full Stack Developer, Python, Django, React, Software Engineer, Portfolio, Elpidio Lomeu">
+    <meta name="author" content="Elpidio Lomeu">
+    <meta property="og:title" content="Elpidio Lomeu – Full Stack Developer">
+    <meta property="og:description" content="Explore my projects, skills, and contact information.">
+    <meta property="og:url" content="https://elpidiolomeu.com">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 gradient-text" href="#">Elpidio Lomeu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-light-custom fw-medium" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light-custom fw-medium" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light-custom fw-medium" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light-custom fw-medium" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light-custom fw-medium" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-0 ms-lg-3">
+                        <a href="https://github.com/ElpidioL" target="_blank" class="nav-link text-light-custom social-nav-link">
+                            <i class="fab fa-github fs-5"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/elpidio-lomeu-ba2612231" target="_blank" class="nav-link text-light-custom social-nav-link">
+                            <i class="fab fa-linkedin fs-5"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a href="/languages/pt-br/index.html" class="nav-link text-light-custom fw-medium">
+                            <i class="fas fa-globe me-1"></i>EN
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+    <section id="home" class="hero-gradient min-vh-100 d-flex align-items-center position-relative">
+        <div class="container mt-5 mt-lg-0">
+            <div class="row align-items-center">
+                <div class="col-lg-6 just">
+                    <div class="fade-in position-relative text-center" style="z-index: 2;">
+                        <h1 class="display-3 fw-bold text-light-custom mb-4">
+                            Hello, I'm <span class="gradient-text">Elpidio</span>
+                        </h1>
+                        <h2 class="h3 text-muted-custom mb-4">Full Stack Developer</h2>
+                        <p class="lead text-light-custom mb-4 opacity-75">
+                            I specialize in building efficient web applications, with strong experience in backend development, 
+                            API design, database modeling, and task automation. I'm comfortable adapting to any tech stack that fits the project needs.
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap justify-content-center">
+                            <a href="#projects" class="btn btn-gradient btn-lg px-4 py-3 rounded-pill">
+                                <i class="fas fa-code me-2"></i>View My Work
+                            </a>
+                            <a href="#contact" class="btn btn-gradient btn-lg px-4 py-3 rounded-pill">
+                                <i class="fas fa-envelope me-2"></i>Get In Touch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-3 mt-lg-0">
+                    <div class="text-center fade-in position-relative" style="z-index: 2; animation-delay: 0.3s;">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-circle" 
+                             style="width: 300px; height: 300px; background: rgba(124, 58, 237, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(124, 58, 237, 0.3);">
+                            <div id="prinny-container" style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-darker-custom">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="display-4 fw-bold text-light-custom section-title fade-in">About Me</h2>
+                    <p class="lead text-muted-custom fade-in">Get to know me better</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="card card-dark rounded-4 p-5 fade-in">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12">
+                                    <h3 class="text-light-custom mb-4 text-center">Full Stack Developer & Problem Solver</h3>
+                                    <p class="text-light-custom mb-4 fs-5 lh-lg">
+                                        I'm a Full Stack Developer based in Brazil who enjoys working on both the frontend and backend 
+                                        to create practical, user-friendly applications. I focus on understanding client needs, building 
+                                        reliable solutions, and ensuring a smooth user experience.
+                                    </p>
+                                    <p class="text-light-custom mb-4 fs-5 lh-lg">
+                                        I’ve worked on a wide range of projects, from internal business tools and data-driven applications to user-focused products and AI-powered solutions. I enjoy adapting to different challenges and continuously improving my craft while staying current with modern development practices.
+                                    </p>
+                                    <p class="text-light-custom mb-0 fs-5 lh-lg">
+                                        When I'm not coding, you'll find me playing video games, enjoying nature, 
+                                        or playing with my cats. Feel free to reach out if you'd like to discuss potential 
+                                        projects or collaborate!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card card-dark text-center p-4 rounded-4 fade-in">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <i class="fas fa-calendar-alt gradient-text" style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <h3 class="gradient-text fw-bold mb-2">3+</h3>
+                                    <p class="text-muted-custom mb-0">Years Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card card-dark text-center p-4 rounded-4 fade-in" style="animation-delay: 0.1s;">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <i class="fas fa-project-diagram gradient-text" style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <h3 class="gradient-text fw-bold mb-2">15+</h3>
+                                    <p class="text-muted-custom mb-0">Projects Completed</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card card-dark text-center p-4 rounded-4 fade-in" style="animation-delay: 0.2s;">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <i class="fas fa-code gradient-text" style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <h3 class="gradient-text fw-bold mb-2">30+</h3>
+                                    <p class="text-muted-custom mb-0">Technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card card-dark text-center p-4 rounded-4 fade-in" style="animation-delay: 0.3s;">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <i class="fas fa-cogs gradient-text" style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <h3 class="gradient-text fw-bold mb-2">10+</h3>
+                                    <p class="text-muted-custom mb-0">Automations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-dark-custom">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-4 fw-bold text-light-custom section-title fade-in">Skills & Technologies</h2>
+                    <p class="lead text-muted-custom fade-in">Technologies I work with</p>
+                </div>
+            </div>
+    
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-dark h-100 p-4 rounded-4 fade-in">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-code text-light-custom" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h4 class="text-light-custom mb-3">Frontend & UI</h4>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <span class="badge skill-badge m-1">React</span>
+                                <span class="badge skill-badge m-1">Next.js</span>
+                                <span class="badge skill-badge m-1">Vue.js</span>
+                                <span class="badge skill-badge m-1">TypeScript</span>
+                                <span class="badge skill-badge m-1">JavaScript</span>
+                                <span class="badge skill-badge m-1">HTML5</span>
+                                <span class="badge skill-badge m-1">CSS3</span>
+                                <span class="badge skill-badge m-1">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-dark h-100 p-4 rounded-4 fade-in" style="animation-delay: 0.1s;">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-server text-light-custom" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h4 class="text-light-custom mb-3">Backend & Integrations</h4>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <span class="badge skill-badge m-1">Python</span>
+                                <span class="badge skill-badge m-1">Django</span>
+                                <span class="badge skill-badge m-1">Node.js</span>
+                                <span class="badge skill-badge m-1">Express</span>
+                                <span class="badge skill-badge m-1">Golang</span>
+                                <span class="badge skill-badge m-1">PHP</span>
+                                <span class="badge skill-badge m-1">REST APIs</span>
+                                <span class="badge skill-badge m-1">Celery</span>
+                                <span class="badge skill-badge m-1">Stripe</span>
+                                <span class="badge skill-badge m-1">MercadoPago</span>
+                                <span class="badge skill-badge m-1">WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-dark h-100 p-4 rounded-4 fade-in" style="animation-delay: 0.2s;">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-database text-light-custom" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h4 class="text-light-custom mb-3">Data & Storage</h4>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <span class="badge skill-badge m-1">PostgreSQL</span>
+                                <span class="badge skill-badge m-1">MySQL</span>
+                                <span class="badge skill-badge m-1">MongoDB</span>
+                                <span class="badge skill-badge m-1">SQLite</span>
+                                <span class="badge skill-badge m-1">Redis</span>
+                                <span class="badge skill-badge m-1">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-dark h-100 p-4 rounded-4 fade-in" style="animation-delay: 0.3s;">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-tools text-light-custom" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h4 class="text-light-custom mb-3">DevOps & Workflow</h4>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <span class="badge skill-badge m-1">Git</span>
+                                <span class="badge skill-badge m-1">CI/CD</span>
+                                <span class="badge skill-badge m-1">Docker</span>
+                                <span class="badge skill-badge m-1">AWS</span>
+                                <span class="badge skill-badge m-1">EC2</span>
+                                <span class="badge skill-badge m-1">S3</span>
+                                <span class="badge skill-badge m-1">RDS</span>
+                                <span class="badge skill-badge m-1">Lambda</span>
+                                <span class="badge skill-badge m-1">Nginx</span>
+                                <span class="badge skill-badge m-1">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5 bg-darker-custom">
+        <div class="container text-center mb-5">
+          <h2 class="display-4 fw-bold text-light-custom section-title fade-in">Featured Projects</h2>
+          <p class="lead text-muted-custom fade-in">
+            Some of my recent work, including projects I built from scratch and others I contributed to.
+          </p>
+        </div>
+      
+        <div class="swiper projectsSwiper container text-center">
+            <div class="swiper-wrapper">
+            
+            <div class="swiper-slide d-flex h-100">
+                <div class="card card-dark project-card h-100 rounded-4 overflow-hidden fade-in" style="animation-delay: 0.1s;">
+                    <div class="project-image">
+                            <i class="fas fa-apple-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-body p-4">
+                        <h3 class="text-light-custom mb-3">CalorIA</h3>
+                        <p class="text-muted-custom mb-3">
+                        Your personal food diary directly on WhatsApp. Log meals via photo, text, or audio and receive instant calories, macros, and personalized guidance.
+                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-secondary me-1 mb-1">Python</span>
+                            <span class="badge bg-secondary me-1 mb-1">Flask</span>
+                            <span class="badge bg-secondary me-1 mb-1">NoSQL</span>
+                            <span class="badge bg-secondary me-1 mb-1">Payments</span>
+                            <span class="badge bg-secondary me-1 mb-1">AI</span>
+                            <span class="badge bg-secondary me-1 mb-1">AWS</span>
+                            <span class="badge bg-success me-1 mb-1">Client Project</span>      
+                        </div>
+                        <div class="d-grid gap-2">
+                        <a href="https://usecaloria.com" target="_blank" class="btn btn-gradient rounded-pill">Access Website</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide">
+                    <div class="card card-dark project-card  rounded-4 overflow-hidden fade-in" style="animation-delay: 0.4s;">
+                    <div class="project-image">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-body p-4">
+                        <h3 class="text-light-custom mb-3">Gênio do Enem</h3>
+                        <p class="text-muted-custom mb-3">
+                        A study platform for ENEM students that uses AI to explain challenging questions step by step.
+                        Practice with real exam questions and track your progress while learning efficiently.
+                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-secondary me-1 mb-1">Python</span>
+                            <span class="badge bg-secondary me-1 mb-1">Django</span>
+                            <span class="badge bg-secondary me-1 mb-1">SQL</span>
+                            <span class="badge bg-secondary me-1 mb-1">REST API</span>
+                            <span class="badge bg-secondary me-1 mb-1">Payments</span>
+                            <span class="badge bg-secondary me-1 mb-1">AI</span>
+                            <span class="badge bg-secondary me-1 mb-1">WhatsApp</span>
+                            <span class="badge bg-secondary me-1 mb-1">AWS</span>
+                            <span class="badge bg-success me-1 mb-1">Client Project</span>
+                        </div>
+                        <div class="d-grid gap-2">
+                        <a href="https://geniodoenem.com" target="_blank" class="btn btn-gradient rounded-pill">Access Website</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide">
+                    <div class="card card-dark project-card rounded-4 overflow-hidden fade-in" style="animation-delay: 0.6s;">
+                        <div class="project-image">
+                            <i class="fas fa-users-cog" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="text-light-custom mb-3">Recruiting App</h3>
+                            <p class="text-muted-custom mb-3">
+                                A smart recruiting platform that helps HR teams filter, track, and manage applicants efficiently.  
+                                Automated workflows simplify each phase of the hiring process and improve overall performance.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1 mb-1">Python</span>
+                                <span class="badge bg-secondary me-1 mb-1">Django</span>
+                                <span class="badge bg-secondary me-1 mb-1">SQL</span>
+                                <span class="badge bg-secondary me-1 mb-1">REST API</span>
+                                <span class="badge bg-secondary me-1 mb-1">Automation</span>
+                                <span class="badge bg-secondary me-1 mb-1">Email</span>
+                                <span class="badge bg-secondary me-1 mb-1">Integrations</span>
+                                <span class="badge bg-secondary me-1 mb-1">Reports & Exports</span>
+                                <span class="badge bg-secondary me-1 mb-1">AWS</span>
+                                <span class="badge bg-success me-1 mb-1">Client Project</span>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-gradient rounded-pill" disabled>Private Platform</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="card card-dark project-card rounded-4 overflow-hidden fade-in" style="animation-delay: 0.9s;">
+                        <div class="project-image">
+                            <i class="fas fa-brain" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="text-light-custom mb-3">Career Path</h3>
+                            <p class="text-muted-custom mb-3">
+                                A platform that helps students explore and choose the best career path using AI-powered insights.  
+                                The app analyzes interests, skills and more to provide personalized recommendations and guidance.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1 mb-1">Python</span>
+                                <span class="badge bg-secondary me-1 mb-1">REST API</span>
+                                <span class="badge bg-secondary me-1 mb-1">SQL</span>
+                                <span class="badge bg-secondary me-1 mb-1">React</span>
+                                <span class="badge bg-secondary me-1 mb-1">TypeScript</span>
+                                <span class="badge bg-secondary me-1 mb-1">Tailwind</span>
+                                <span class="badge bg-secondary me-1 mb-1">AI</span>
+                                <span class="badge bg-secondary me-1 mb-1">AWS</span>
+                                <span class="badge bg-success me-1 mb-1">Client Project</span>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-gradient rounded-pill" disabled>Private Platform</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card-dark project-card rounded-4 overflow-hidden fade-in" style="animation-delay: 0.8s;">
+                        <div class="project-image">
+                            <i class="fas fa-id-badge" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="text-light-custom mb-3">Company Portal</h3>
+                            <p class="text-muted-custom mb-3">
+                                A centralized platform for employees to manage tasks, including timesheets,
+                                vacation requests, expense reimbursements, and other tools to boost efficiency and engagement.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1 mb-1">Python</span>
+                                <span class="badge bg-secondary me-1 mb-1">Django</span>
+                                <span class="badge bg-secondary me-1 mb-1">SQL</span>
+                                <span class="badge bg-secondary me-1 mb-1">REST API</span>
+                                <span class="badge bg-secondary me-1 mb-1">Cache</span>
+                                <span class="badge bg-secondary me-1 mb-1">Queue/Scheduler</span>
+                                <span class="badge bg-secondary me-1 mb-1">Reports & Exports</span>
+                                <span class="badge bg-secondary me-1 mb-1">Documents & Files</span>
+                                <span class="badge bg-secondary me-1 mb-1">AWS</span>
+                                <span class="badge bg-success me-1 mb-1">Client Project</span>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-gradient rounded-pill" disabled>Private Platform</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card-dark project-card rounded-4 overflow-hidden fade-in" style="animation-delay: 0.8s;">
+                        <div class="project-image">
+                            <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="text-light-custom mb-3">Employee Performance</h3>
+                            <p class="text-muted-custom mb-3">
+                                A comprehensive platform to track employee growth and performance.  
+                                It combines GRIT metrics, evaluations, surveys, and document management to simplify feedback, data analysis, and development tracking.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1 mb-1">Python</span>
+                                <span class="badge bg-secondary me-1 mb-1">Django</span>
+                                <span class="badge bg-secondary me-1 mb-1">SQL</span>
+                                <span class="badge bg-secondary me-1 mb-1">REST API</span>
+                                <span class="badge bg-secondary me-1 mb-1">Reports & Exports</span>
+                                <span class="badge bg-secondary me-1 mb-1">Documents & Files</span>
+                                <span class="badge bg-secondary me-1 mb-1">AWS</span>
+                                <span class="badge bg-success me-1 mb-1">Client Project</span>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-gradient rounded-pill" disabled>Private Platform</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    
+    <section class="mb-5">
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-10">
+                <h3 class="text-light-custom mb-4 text-center">Education & Certifications</h3>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card card-dark p-4 rounded-4 fade-in">
+                            <h5 class="text-light-custom mb-2 d-flex align-items-center justify-content-between">
+                                <a href="https://cert.efset.org/en/ywXqnh" target="_blank" class="text-light-custom text-decoration-none d-flex align-items-center link-hover">
+                                    <i class="fas fa-certificate me-2 gradient-text"></i>
+                                    EF SET English Certificate
+                                    <i class="fas fa-external-link-alt ms-2 text-muted-custom" style="font-size: 0.8rem;"></i>
+                                </a>
+                            </h5>
+                            <p class="text-muted-custom mb-0">C2 Proficient (82/100)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card card-dark p-4 rounded-4 fade-in" style="animation-delay: 0.1s;">
+                            <h5 class="text-light-custom mb-2 d-flex align-items-center justify-content-between">
+                                <a href="https://media.licdn.com/dms/image/v2/D4D2DAQHjn7W2xIZJpQ/profile-treasury-image-shrink_8192_8192/B4DZX72IlJG8Ak-/0/1743687028472?e=1760493600&v=beta&t=JcXjrzWfvNLmPqqzmC7Xa9drDK1cVp1EIpXPKtFz9Rw" target="_blank" class="text-light-custom text-decoration-none d-flex align-items-center link-hover">
+                                    <i class="fas fa-university me-2 gradient-text"></i>
+                                    Academic Medal – PUC Minas
+                                    <i class="fas fa-external-link-alt ms-2 text-muted-custom" style="font-size: 0.8rem;"></i>
+                                </a>
+                            </h5>
+                            <p class="text-muted-custom mb-0">Academic Excellence Award - University Recognition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-darker-custom">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="h2 fw-bold text-light-custom section-title fade-in">Download CV</h2>
+                    <p class="text-muted-custom fade-in">Get my complete resume</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <div class="card card-dark p-4 rounded-4 fade-in">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-file-pdf gradient-text" style="font-size: 3rem;"></i>
+                            </div>
+                            <h4 class="text-light-custom mb-3">Curriculum Vitae</h4>
+                            <p class="text-muted-custom mb-4">Download my complete CV in PDF format</p>
+                            <a href="documents/Elpidio-Lomeu-CV-2025-en-us.pdf" target="_blank" class="btn btn-gradient btn-lg rounded-pill px-4">
+                                <i class="fas fa-download me-2"></i>Download CV (PDF)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-5 bg-dark-custom">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-4 fw-bold text-light-custom section-title fade-in">Get In Touch</h2>
+                    <p class="lead text-muted-custom fade-in">Let's work together on your next project</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-dark text-center p-4 rounded-4 fade-in">
+                        <div class="card-body">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4 class="text-light-custom mb-2">Email</h4>
+                            <p class="text-muted-custom mb-3">Send me a message</p>
+                            <a href="mailto:lomeuelpidio@gmail.com" class="btn btn-gradient rounded-pill">
+                                <i class="fas fa-envelope me-2"></i>Contact Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-dark text-center p-4 rounded-4 fade-in" style="animation-delay: 0.1s;">
+                        <div class="card-body">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <h4 class="text-light-custom mb-2">LinkedIn</h4>
+                            <p class="text-muted-custom mb-3">Connect with me</p>
+                            <a href="https://www.linkedin.com/in/elpidio-lomeu-ba2612231" target="_blank" class="btn btn-gradient rounded-pill">
+                                <i class="fab fa-linkedin me-2"></i>Connect
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-dark text-center p-4 rounded-4 fade-in" style="animation-delay: 0.2s;">
+                        <div class="card-body">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h4 class="text-light-custom mb-2">GitHub</h4>
+                            <p class="text-muted-custom mb-3">View my GitHub</p>
+                            <a href="https://github.com/ElpidioL" target="_blank" class="btn btn-gradient rounded-pill">
+                                <i class="fab fa-github me-2"></i>View GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

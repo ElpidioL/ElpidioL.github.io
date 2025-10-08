@@ -1,0 +1,299 @@
+:root {
+    --primary-purple: #7c3aed;
+    --secondary-purple: #a855f7;
+    --dark-bg: #0f0f23;
+    --darker-bg: #080814;
+    --card-bg: #1a1a2e;
+    --text-light: #e2e8f0;
+    --text-muted: #94a3b8;
+    --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    --gradient-secondary: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bg-dark-custom {
+    background-color: var(--dark-bg) !important;
+}
+
+.bg-darker-custom {
+    background-color: var(--darker-bg) !important;
+}
+
+.bg-card-custom {
+    background-color: var(--card-bg) !important;
+}
+
+.text-light-custom {
+    color: var(--text-light) !important;
+}
+
+.text-muted-custom {
+    color: var(--text-muted) !important;
+}
+
+.btn-gradient {
+    background: var(--gradient-primary);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+    color: white;
+}
+
+.btn-outline-gradient {
+    border: 2px solid transparent;
+    background: var(--gradient-primary);
+    background-clip: padding-box;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gradient:hover {
+    background: var(--gradient-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.card-dark {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card-dark:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.2);
+}
+
+.navbar-dark-custom {
+    background: rgba(15, 15, 35, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.5;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.skill-badge {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    margin: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.4);
+}
+
+.project-card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    background: var(--gradient-primary);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background: rgba(124, 58, 237, 0.2);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darker-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-purple);
+}
+
+#prinny-container {
+    position: relative;
+    z-index: 1;
+}
+
+#prinny-container canvas {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.link-hover {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.link-hover:hover {
+    color: var(--secondary-purple) !important;
+    transform: translateX(5px);
+}
+
+.link-hover:hover .gradient-text {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.social-nav-link {
+    transition: all 0.3s ease;
+    padding: 0.5rem !important;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.social-nav-link:hover {
+    background: var(--gradient-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+}
+
+.social-nav-link:hover i {
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+    #prinny-container {
+        width: 250px !important;
+        height: 250px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #prinny-container {
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
