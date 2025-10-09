@@ -311,3 +311,50 @@ html {
         padding-top: 100px !important;
     }
 }
+
+.navbar {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.navbar .container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.navbar-nav {
+    flex-wrap: nowrap;
+}
+
+.navbar-nav .nav-item {
+    flex-shrink: 1;
+}
+
+.social-nav-link {
+    min-width: 40px;
+    flex-shrink: 0;
+}
+
+
+section.mb-5 {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+section.mb-5 .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+section.mb-5 .col-lg-10 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+section.mb-5 a {
+    word-break: break-all;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
