@@ -224,9 +224,9 @@ class ThreeJSScene {
         const color2 = new THREE.Color(0xa855f7);
         
         for (let i = 0; i < this.particleCount; i++) {
-            positions[i * 3 + 0] = (Math.random() - 0.5) * 500; // x
-            positions[i * 3 + 1] = Math.random() * 500; // y (starting high)
-            positions[i * 3 + 2] = (Math.random() - 0.5) * 500; // z
+            positions[i * 3 + 0] = (Math.random() - 0.5) * 500;
+            positions[i * 3 + 1] = Math.random() * 500;
+            positions[i * 3 + 2] = (Math.random() - 0.5) * 500;
             
             const color = color1.clone().lerp(color2, Math.random());
             colors[i * 3 + 0] = color.r;
@@ -404,7 +404,179 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         window.prinnyScene = new ThreeJSScene('prinny-container');
     }, 100);
+    
+    initializeSideEffects();
+    initializeSideRunners();
 });
+
+ 
+class SideEffects {
+    constructor() {
+        this.particles = [];
+        this.shapes = [];
+        this.orbs = [];
+        this.isMobile = window.innerWidth <= 768;
+        this.init();
+    }
+    
+    init() {
+        this.createParticles();
+        this.createGeometricShapes();
+        this.createFloatingOrbs();
+        this.setupEventListeners();
+    }
+    
+    createParticles() {
+        const container = document.getElementById('floating-particles');
+        if (!container) return;
+        
+        const particleCount = this.isMobile ? 15 : 30;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            
+            const size = Math.random() * 6 + 2;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            
+            
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            
+            
+            particle.style.animationDelay = Math.random() * 6 + 's';
+            
+            container.appendChild(particle);
+            this.particles.push(particle);
+        }
+    }
+    
+    createGeometricShapes() {
+        const container = document.getElementById('geometric-shapes');
+        if (!container) return;
+        
+        const shapeCount = this.isMobile ? 5 : 10;
+        const shapes = ['triangle', 'square', 'circle'];
+        
+        for (let i = 0; i < shapeCount; i++) {
+            const shape = document.createElement('div');
+            const shapeType = shapes[Math.floor(Math.random() * shapes.length)];
+            
+            shape.className = `shape ${shapeType}`;
+            
+            
+            shape.style.left = Math.random() * 100 + '%';
+            shape.style.top = Math.random() * 100 + '%';
+            shape.style.animationDelay = Math.random() * 12 + 's';
+            
+            container.appendChild(shape);
+            this.shapes.push(shape);
+        }
+    }
+    
+    createFloatingOrbs() {
+        const container = document.getElementById('floating-orbs');
+        if (!container) return;
+        
+        const orbCount = this.isMobile ? 2 : 3;
+        
+        for (let i = 0; i < orbCount; i++) {
+            const orb = document.createElement('div');
+            orb.className = 'orb';
+            
+            
+            orb.style.left = Math.random() * 100 + '%';
+            orb.style.top = Math.random() * 100 + '%';
+            
+            
+            orb.style.animationDelay = Math.random() * 20 + 's';
+            
+            container.appendChild(orb);
+            this.orbs.push(orb);
+        }
+    }
+    
+    setupEventListeners() {
+        window.addEventListener('resize', () => {
+            this.handleResize();
+        });
+        
+        
+        document.addEventListener('mousemove', (e) => {
+            this.handleMouseMove(e);
+        });
+    }
+    
+    handleResize() {
+        const wasMobile = this.isMobile;
+        this.isMobile = window.innerWidth <= 768;
+        
+        if (wasMobile !== this.isMobile) {
+            this.recreateEffects();
+        }
+    }
+    
+    recreateEffects() {
+        
+        this.clearEffects();
+        
+        
+        this.createParticles();
+        this.createGeometricShapes();
+        this.createFloatingOrbs();
+    }
+    
+    clearEffects() {
+        const containers = [
+            'floating-particles',
+            'geometric-shapes', 
+            'floating-orbs'
+        ];
+        
+        containers.forEach(id => {
+            const container = document.getElementById(id);
+            if (container) {
+                container.innerHTML = '';
+            }
+        });
+        
+        this.particles = [];
+        this.shapes = [];
+        this.orbs = [];
+    }
+    
+    handleMouseMove(e) {
+        if (this.isMobile) return;
+        
+        const mouseX = e.clientX / window.innerWidth;
+        const mouseY = e.clientY / window.innerHeight;
+        
+        
+        this.particles.forEach((particle, index) => {
+            const speed = (index % 3 + 1) * 0.5;
+            const moveX = (mouseX - 0.5) * speed * 20;
+            const moveY = (mouseY - 0.5) * speed * 20;
+            
+            particle.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+        
+        
+        this.orbs.forEach((orb, index) => {
+            const speed = (index % 2 + 1) * 0.3;
+            const moveX = (mouseX - 0.5) * speed * 30;
+            const moveY = (mouseY - 0.5) * speed * 30;
+            
+            orb.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    }
+}
+
+ 
+function initializeSideEffects() {
+    window.sideEffects = new SideEffects();
+}
 
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = ThreeJSScene;
