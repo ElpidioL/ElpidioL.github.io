@@ -224,9 +224,9 @@ class ThreeJSScene {
         const color2 = new THREE.Color(0xa855f7);
         
         for (let i = 0; i < this.particleCount; i++) {
-            positions[i * 3 + 0] = (Math.random() - 0.5) * 500; // x
-            positions[i * 3 + 1] = Math.random() * 500; // y (starting high)
-            positions[i * 3 + 2] = (Math.random() - 0.5) * 500; // z
+            positions[i * 3 + 0] = (Math.random() - 0.5) * 500;
+            positions[i * 3 + 1] = Math.random() * 500;
+            positions[i * 3 + 2] = (Math.random() - 0.5) * 500;
             
             const color = color1.clone().lerp(color2, Math.random());
             colors[i * 3 + 0] = color.r;
@@ -405,11 +405,11 @@ document.addEventListener('DOMContentLoaded', () => {
         window.prinnyScene = new ThreeJSScene('prinny-container');
     }, 100);
     
-    // Initialize side effects
     initializeSideEffects();
+    initializeSideRunners();
 });
 
-// Side Effects System
+ 
 class SideEffects {
     constructor() {
         this.particles = [];
@@ -436,16 +436,16 @@ class SideEffects {
             const particle = document.createElement('div');
             particle.className = 'particle';
             
-            // Random size between 2px and 8px
+            
             const size = Math.random() * 6 + 2;
             particle.style.width = size + 'px';
             particle.style.height = size + 'px';
             
-            // Random position
+            
             particle.style.left = Math.random() * 100 + '%';
             particle.style.top = Math.random() * 100 + '%';
             
-            // Random animation delay
+            
             particle.style.animationDelay = Math.random() * 6 + 's';
             
             container.appendChild(particle);
@@ -466,7 +466,7 @@ class SideEffects {
             
             shape.className = `shape ${shapeType}`;
             
-            // Random position and animation delay
+            
             shape.style.left = Math.random() * 100 + '%';
             shape.style.top = Math.random() * 100 + '%';
             shape.style.animationDelay = Math.random() * 12 + 's';
@@ -486,11 +486,11 @@ class SideEffects {
             const orb = document.createElement('div');
             orb.className = 'orb';
             
-            // Random starting position
+            
             orb.style.left = Math.random() * 100 + '%';
             orb.style.top = Math.random() * 100 + '%';
             
-            // Random animation delay
+            
             orb.style.animationDelay = Math.random() * 20 + 's';
             
             container.appendChild(orb);
@@ -503,7 +503,7 @@ class SideEffects {
             this.handleResize();
         });
         
-        // Mouse movement effect
+        
         document.addEventListener('mousemove', (e) => {
             this.handleMouseMove(e);
         });
@@ -519,10 +519,10 @@ class SideEffects {
     }
     
     recreateEffects() {
-        // Clear existing effects
+        
         this.clearEffects();
         
-        // Recreate with new settings
+        
         this.createParticles();
         this.createGeometricShapes();
         this.createFloatingOrbs();
@@ -553,7 +553,7 @@ class SideEffects {
         const mouseX = e.clientX / window.innerWidth;
         const mouseY = e.clientY / window.innerHeight;
         
-        // Move particles based on mouse position
+        
         this.particles.forEach((particle, index) => {
             const speed = (index % 3 + 1) * 0.5;
             const moveX = (mouseX - 0.5) * speed * 20;
@@ -562,7 +562,7 @@ class SideEffects {
             particle.style.transform = `translate(${moveX}px, ${moveY}px)`;
         });
         
-        // Move orbs based on mouse position
+        
         this.orbs.forEach((orb, index) => {
             const speed = (index % 2 + 1) * 0.3;
             const moveX = (mouseX - 0.5) * speed * 30;
@@ -573,7 +573,7 @@ class SideEffects {
     }
 }
 
-// Initialize side effects
+ 
 function initializeSideEffects() {
     window.sideEffects = new SideEffects();
 }
