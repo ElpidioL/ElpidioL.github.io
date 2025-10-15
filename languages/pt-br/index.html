@@ -12,16 +12,27 @@
 
         gtag('config', 'G-9B88628SWN');
     </script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"></noscript>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
+
     <link href="/assets/css/styles.css" rel="stylesheet">
     
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
 
     <meta name="description" content="Elpidio Lomeu – Desenvolvedor Full Stack especializado em aplicações web modernas, sistemas backend e integrações com IA.">
     <meta name="keywords" content="Desenvolvedor Full Stack, Python, Django, React, Engenheiro de Software, Portfólio, Elpidio Lomeu">
@@ -126,9 +137,9 @@
     <section id="about" class="py-5 bg-darker-custom">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 text-center mb-5">
+                <div class="col-lg-8 text-center mb-1">
                     <h2 class="display-4 fw-bold text-light-custom section-title fade-in">Sobre Mim</h2>
-                    <p class="lead text-muted-custom fade-in">Conheça-me melhor</p>
+                    <p class="lead text-muted-custom fade-in mt-2">Conheça-me melhor</p>
                 </div>
             </div>
             
@@ -216,10 +227,10 @@
 
     <section id="skills" class="py-5 bg-dark-custom">
         <div class="container">
-            <div class="row justify-content-center mb-5">
+            <div class="row justify-content-center mb-1">
                 <div class="col-lg-8 text-center">
                     <h2 class="display-4 fw-bold text-light-custom section-title fade-in">Habilidades & Tecnologias</h2>
-                    <p class="lead text-muted-custom fade-in">Tecnologias com as quais trabalho</p>
+                    <p class="lead text-muted-custom fade-in mt-2">Tecnologias com as quais trabalho</p>
                 </div>
             </div>
     
@@ -315,9 +326,9 @@
     </section>
 
     <section id="projects" class="py-5 bg-darker-custom">
-        <div class="container text-center mb-5">
+        <div class="container text-center mb-1">
           <h2 class="display-4 fw-bold text-light-custom section-title fade-in">Projetos em Destaque</h2>
-          <p class="lead text-muted-custom fade-in">
+          <p class="lead text-muted-custom fade-in mt-2">
             Alguns dos meus trabalhos recentes, incluindo projetos que construí do zero e outros nos quais contribuí.
           </p>
         </div>
@@ -541,10 +552,10 @@
 
     <section class="py-5 bg-darker-custom">
         <div class="container">
-            <div class="row justify-content-center mb-5">
+            <div class="row justify-content-center mb-1">
                 <div class="col-lg-8 text-center">
                     <h2 class="h2 fw-bold text-light-custom section-title fade-in">Baixar CV</h2>
-                    <p class="text-muted-custom fade-in">Obtenha meu currículo completo</p>
+                    <p class="lead text-muted-custom fade-in mt-2">Obtenha meu currículo completo</p>
                 </div>
             </div>
             
@@ -569,10 +580,10 @@
     
     <section id="contact" class="py-5 bg-dark-custom">
         <div class="container">
-            <div class="row justify-content-center mb-5">
+            <div class="row justify-content-center mb-1">
                 <div class="col-lg-8 text-center">
                     <h2 class="display-4 fw-bold text-light-custom section-title fade-in">Entre em Contato</h2>
-                    <p class="lead text-muted-custom fade-in">Vamos trabalhar juntos no seu próximo projeto</p>
+                    <p class="lead text-muted-custom fade-in mt-2">Vamos trabalhar juntos no seu próximo projeto</p>
                 </div>
             </div>
             
@@ -626,6 +637,6 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/script.js"></script>
+    <script defer src="/assets/js/script.js"></script>
 </body>
 </html>

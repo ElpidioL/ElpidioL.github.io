@@ -406,7 +406,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
     
     initializeSideEffects();
-    initializeSideRunners();
 });
 
  
