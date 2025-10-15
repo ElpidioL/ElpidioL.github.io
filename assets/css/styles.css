@@ -256,6 +256,53 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Title Glow Effects */
+h1, h2, h3, h4, h5, h6 {
+    animation: headingGlow 5s ease-in-out infinite;
+}
+
+.navbar-brand {
+    animation: navbarBrandGlow 6s ease-in-out infinite;
+}
+
+@keyframes headingGlow {
+    0%, 100% {
+        text-shadow: 0 0 8px rgba(124, 58, 237, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        text-shadow: 0 0 25px rgba(124, 58, 237, 0.9), 0 0 35px rgba(168, 85, 247, 0.7), 0 0 45px rgba(139, 92, 246, 0.5);
+        transform: scale(1.03);
+    }
+}
+
+@keyframes navbarBrandGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+        transform: scale(1);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(124, 58, 237, 1), 0 0 40px rgba(168, 85, 247, 0.8), 0 0 50px rgba(139, 92, 246, 0.6);
+        transform: scale(1.08);
+    }
+}
+
+/* Hero Title Special Glow */
+.hero-gradient h1 {
+    animation: heroTitleGlow 4s ease-in-out infinite;
+}
+
+@keyframes heroTitleGlow {
+    0%, 100% {
+        text-shadow: 0 0 15px rgba(124, 58, 237, 0.6), 0 0 25px rgba(168, 85, 247, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        text-shadow: 0 0 40px rgba(124, 58, 237, 1), 0 0 60px rgba(168, 85, 247, 0.8), 0 0 80px rgba(139, 92, 246, 0.6);
+        transform: scale(1.05);
+    }
+}
+
 .bg-dark-custom {
     background-color: var(--dark-bg) !important;
 }
@@ -308,6 +355,18 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradientTextGlow 4s ease-in-out infinite;
+}
+
+@keyframes gradientTextGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px rgba(124, 58, 237, 0.3));
+        transform: scale(1);
+    }
+    50% {
+        filter: drop-shadow(0 0 15px rgba(124, 58, 237, 0.8)) drop-shadow(0 0 25px rgba(168, 85, 247, 0.6));
+        transform: scale(1.05);
+    }
 }
 
 .card-dark {
@@ -348,6 +407,7 @@ html {
 .section-title {
     position: relative;
     display: inline-block;
+    animation: titleGlow 3s ease-in-out infinite;
 }
 
 .section-title::after {
@@ -360,6 +420,29 @@ html {
     height: 3px;
     background: var(--gradient-primary);
     border-radius: 2px;
+    animation: underlineGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(124, 58, 237, 0.3);
+        transform: scale(1);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(124, 58, 237, 0.8), 0 0 30px rgba(168, 85, 247, 0.6);
+        transform: scale(1.02);
+    }
+}
+
+@keyframes underlineGlow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(124, 58, 237, 0.3);
+        transform: translateX(-50%) scaleX(1);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(124, 58, 237, 0.8), 0 0 25px rgba(168, 85, 247, 0.6);
+        transform: translateX(-50%) scaleX(1.1);
+    }
 }
 
 .skill-badge {
